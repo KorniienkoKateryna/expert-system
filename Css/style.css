@@ -1,0 +1,79 @@
+/* Базові стилі */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+/* Контейнер для вопросів */
+#question {
+  margin-bottom: 20px;
+}
+
+/* Сітка для відповідей */
+#answers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+button {
+  padding: 0;
+  background-color: #FFD700; /* Жовтий колір для кнопок */
+  border: none;
+}
+
+button img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1; /* Забезпечує пропорції 1:1 для зображень */
+}
+
+button:focus {
+  outline: 2px solid #FFA07A; /* Окрема рамка для виділення кнопок */
+}
+
+/* Відповіді */
+button.selected {
+  border: 2px solid #20B2AA; /* Колір рамки для вибраних відповідей */
+  box-sizing: border-box;
+}
+
+/* Рекомендація */
+#result {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid #20B2AA; /* Колір рамки для рекомендації */
+}
+
+/* Ваші існуючі стилі тут */
+
+#answers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+button {
+  max-width: 300px; /* Налаштуйте розмір кнопок за бажанням */
+}
+
+@media (max-width: 767px) {
+  #answers {
+    grid-template-columns: 1fr; /* 1 колонка на малих екранах */
+  }
+}
+
